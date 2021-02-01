@@ -61,7 +61,7 @@ function pickIndex(current: number): number {
 }
 
 function App(): JSX.Element {
-    const [targetIndex, setTargetIndex] = useState<number>(5);
+    const [targetIndex, setTargetIndex] = useState<number>(2);
 
     const target = new Date(times[targetIndex].time);
     const chance = times[targetIndex].chance;
