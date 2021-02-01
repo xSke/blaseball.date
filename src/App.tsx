@@ -42,6 +42,9 @@ function TimeDisplay(props: {
 ];*/
 
 const times = [
+    { time: "2021-01-18T17:00:00.000Z", chance: 0.0 },
+    { time: "2021-01-25T17:00:00.000Z", chance: 0.0 },
+    { time: "2021-02-01T17:00:00.000Z", chance: 0.0 },
     { time: "2021-02-08T17:00:00.000Z", chance: 0.01 },
     { time: "2021-02-15T17:00:00.000Z", chance: 0.03 },
     { time: "2021-02-22T17:00:00.000Z", chance: 0.68 },
@@ -61,7 +64,7 @@ function pickIndex(current: number): number {
 }
 
 function App(): JSX.Element {
-    const [targetIndex, setTargetIndex] = useState<number>(2);
+    const [targetIndex, setTargetIndex] = useState<number>(5);
 
     const target = new Date(times[targetIndex].time);
     const chance = times[targetIndex].chance;
