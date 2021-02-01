@@ -104,8 +104,8 @@ function App(): JSX.Element {
                 </a>
                 <br />
                 <small>
-                    (this site is unofficial and not affiliated with The Game
-                    Band.)
+                    (this site is not affiliated with The Game Band. information
+                    may change whenever Parker feels like it.)
                 </small>
             </footer>
         </div>
