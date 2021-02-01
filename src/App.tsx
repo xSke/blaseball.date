@@ -91,6 +91,11 @@ function App(): JSX.Element {
                 >
                     ...unless?
                 </a>
+                <br />
+                <small>
+                    (this site is unofficial and not affiliated with The Game
+                    Band.)
+                </small>
             </footer>
         </div>
     );
