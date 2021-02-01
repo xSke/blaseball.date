@@ -92,7 +92,7 @@ function App(): JSX.Element {
             <TimeDisplay hours={hours} minutes={minutes} seconds={seconds} />
 
             <footer>
-                <a href="https://twitter.com/blaseball/status/1350282807222824960">
+                <a href="https://twitter.com/blaseball/status/1356290353360371712">
                     probably*.
                 </a>
                 &nbsp;&nbsp;&nbsp;
