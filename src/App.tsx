@@ -41,7 +41,7 @@ function TimeDisplay(props: {
     { time: "2021-03-29T17:00:00.000Z", chance: 0.0 },
 ];*/
 
-const times = [
+/*const times = [
     { time: "2021-01-18T17:00:00.000Z", chance: 0.0 },
     { time: "2021-01-25T17:00:00.000Z", chance: 0.0 },
     { time: "2021-02-01T17:00:00.000Z", chance: 0.0 },
@@ -53,6 +53,20 @@ const times = [
     { time: "2021-03-15T17:00:00.000Z", chance: 0.01 },
     { time: "2021-03-22T17:00:00.000Z", chance: 0.01 },
     { time: "2021-03-29T17:00:00.000Z", chance: 0.0 },
+];*/
+
+const times = [
+    { time: "2021-01-18T17:00:00.000Z", chance: 0.0 },
+    { time: "2021-01-25T17:00:00.000Z", chance: 0.0 },
+    { time: "2021-02-01T17:00:00.000Z", chance: 0.0 },
+    { time: "2021-02-08T17:00:00.000Z", chance: 0.0 },
+    { time: "2021-02-15T17:00:00.000Z", chance: 0.222 },
+    { time: "2021-02-22T17:00:00.000Z", chance: 0.777 },
+    { time: "2021-03-01T17:00:00.000Z", chance: 0.0222 },
+    { time: "2021-03-08T17:00:00.000Z", chance: 0.0222 },
+    { time: "2021-03-15T17:00:00.000Z", chance: 0.0222 },
+    { time: "2021-03-22T17:00:00.000Z", chance: 0.0222 },
+    { time: "2021-03-29T17:00:00.000Z", chance: 0.0222 },
 ];
 
 function pickIndex(current: number): number {
@@ -70,7 +84,6 @@ function App(): JSX.Element {
     const chance = times[targetIndex].chance;
 
     const [now, setNow] = useState<Date>(new Date());
-    console.log(target, now);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -88,14 +101,14 @@ function App(): JSX.Element {
     return (
         <div className="app">
             <div className="lead-text">
-                There is a <strong>{Math.floor(chance * 100)}%</strong> chance
-                that <strong>Blaseball</strong> will return in...
+                There is a <strong>{chance * 100}%</strong> chance that{" "}
+                <strong>Blaseball</strong> will return in...
             </div>
 
             <TimeDisplay hours={hours} minutes={minutes} seconds={seconds} />
 
             <footer>
-                <a href="https://twitter.com/blaseball/status/1356290353360371712">
+                <a href="https://twitter.com/blaseball/status/1358831724805849090">
                     probably*.
                 </a>
                 &nbsp;&nbsp;&nbsp;
