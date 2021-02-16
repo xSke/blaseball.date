@@ -55,7 +55,7 @@ function TimeDisplay(props: {
     { time: "2021-03-29T17:00:00.000Z", chance: 0.0 },
 ];*/
 
-const times = [
+/*const times = [
     { time: "2021-01-18T17:00:00.000Z", chance: 0.0 },
     { time: "2021-01-25T17:00:00.000Z", chance: 0.0 },
     { time: "2021-02-01T17:00:00.000Z", chance: 0.0 },
@@ -67,18 +67,20 @@ const times = [
     { time: "2021-03-15T17:00:00.000Z", chance: 0.0222 },
     { time: "2021-03-22T17:00:00.000Z", chance: 0.0222 },
     { time: "2021-03-29T17:00:00.000Z", chance: 0.0222 },
-];
+];*/
 
-function pickIndex(current: number): number {
+const times = [{ time: "2021-03-01T17:00:00.000Z", chance: 0.999 }];
+
+/*function pickIndex(current: number): number {
     let next = Math.floor(Math.random() * times.length);
     while (next === current) {
         next = Math.floor(Math.random() * times.length);
     }
     return next;
-}
+}*/
 
 function App(): JSX.Element {
-    const [targetIndex, setTargetIndex] = useState<number>(5);
+    const [targetIndex] = useState<number>(0);
 
     const target = new Date(times[targetIndex].time);
     const chance = times[targetIndex].chance;
@@ -108,16 +110,16 @@ function App(): JSX.Element {
             <TimeDisplay hours={hours} minutes={minutes} seconds={seconds} />
 
             <footer>
-                <a href="https://twitter.com/blaseball/status/1358831724805849090">
+                <a href="https://twitter.com/blaseball/status/1361711010793410571">
                     probably*.
                 </a>
-                &nbsp;&nbsp;&nbsp;
+                {/* &nbsp;&nbsp;&nbsp;
                 <a
                     href="#"
                     onClick={() => setTargetIndex(pickIndex(targetIndex))}
                 >
                     ...unless?
-                </a>
+                </a> */}
                 <br />
                 <small>
                     (this site is not affiliated with The Game Band. information
