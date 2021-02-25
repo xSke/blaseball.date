@@ -69,7 +69,7 @@ function TimeDisplay(props: {
     { time: "2021-03-29T17:00:00.000Z", chance: 0.0222 },
 ];*/
 
-const times = [{ time: "2021-03-01T17:00:00.000Z", chance: 0.999 }];
+const times = [{ time: "2021-03-01T16:00:00.000Z", chance: 0.999 }];
 
 /*function pickIndex(current: number): number {
     let next = Math.floor(Math.random() * times.length);
